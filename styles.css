@@ -52,11 +52,65 @@ nav ul li a:hover {
     border-radius: 30px;
     text-decoration: none;
     font-weight: bold;
-    transition: background 0.3s;
+    transition: background 0.3s, transform 0.3s;
+    position: relative;
 }
 
 .cta-button:hover {
     background: #27ae60;
+    transform: scale(1.1);
+}
+
+.cta-button:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #ff007f, #ff8c00, #ffff00, #0084ff, #00ff7f, #ff007f);
+    background-size: 400% 400%;
+    animation: gradientShift 3s ease infinite;
+    z-index: -1;
+    border-radius: 30px;
+}
+
+/* Button Hover RGB Snake Effect */
+button, .cta-button {
+    position: relative;
+    padding: 12px 20px;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: all 0.4s ease;
+    cursor: pointer;
+}
+
+button:before, .cta-button:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #ff007f, #ff8c00, #ffff00, #0084ff, #00ff7f, #ff007f);
+    background-size: 400% 400%;
+    animation: gradientShift 3s ease infinite;
+    z-index: -1;
+    border-radius: 10px;
+}
+
+button:hover, .cta-button:hover {
+    transform: scale(1.1);
+    border-color: transparent;
+    box-shadow: 0 0 10px rgba(46, 204, 113, 0.5);
+}
+
+/* Animation for RGB Snake Effect */
+@keyframes gradientShift {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 400%; }
+    100% { background-position: 0 0; }
 }
 
 /* Upload Section */
@@ -78,22 +132,6 @@ nav ul li a:hover {
 
 #drop-area:hover {
     background: #f8f9fa;
-}
-
-button {
-    background: #2ecc71;
-    border: none;
-    color: white;
-    padding: 15px 20px;
-    border-radius: 25px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: background 0.3s;
-    margin-top: 20px;
-}
-
-button:hover {
-    background: #27ae60;
 }
 
 /* Results Section */
@@ -119,13 +157,15 @@ button:hover {
     color: white;
     text-decoration: none;
     font-weight: bold;
-    transition: background 0.3s;
+    transition: background 0.3s, box-shadow 0.3s, transform 0.3s;
     display: inline-block;
     margin-top: 20px;
 }
 
 #download-btn:hover {
     background: #27ae60;
+    box-shadow: 0 0 10px rgba(46, 204, 113, 0.5);
+    transform: scale(1.1);
 }
 
 #change-bg-btn {
@@ -137,25 +177,70 @@ button:hover {
     margin-top: 20px;
     border: none;
     cursor: pointer;
+    transition: background 0.3s, box-shadow 0.3s, transform 0.3s;
 }
 
 #change-bg-btn:hover {
     background: #9b59b6;
+    box-shadow: 0 0 10px rgba(142, 68, 173, 0.5);
+    transform: scale(1.1);
+}
+
+/* Color Picker Section */
+#color-picker-container {
+    margin-top: 20px;
+    display: none;  /* Initially hidden */
+}
+
+#color-select-btn {
+    background: #f39c12;
+    padding: 12px 20px;
+    border-radius: 15px;
+    color: white;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+
+#color-select-btn:hover {
+    background: #e67e22;
+    transform: scale(1.1);
 }
 
 #color-picker {
-    margin-top: 20px;
-    padding: 10px;
+    margin-top: 10px;
+    display: inline-block;
     border: 2px solid #2ecc71;
-    border-radius: 10px;
-    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
     background: #fff;
+    transition: background-color 0.3s;
 }
 
 #color-picker input {
     padding: 5px;
     border-radius: 5px;
     border: 1px solid #ccc;
+}
+
+/* Edit Another Photo Button */
+#edit-another-btn {
+    background: #3498db;
+    padding: 15px 25px;
+    border-radius: 25px;
+    color: white;
+    font-weight: bold;
+    margin-top: 20px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s, box-shadow 0.3s, transform 0.3s;
+}
+
+#edit-another-btn:hover {
+    background: #2980b9;
+    box-shadow: 0 0 10px rgba(52, 152, 219, 0.5);
+    transform: scale(1.1);
 }
 
 /* Footer */
