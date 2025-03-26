@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AI Background Remover by Naim Xbz</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                
+                <!-- Add the links to your specific pages here -->
+                <li><a href="features.html">Features</a></li> <!-- Link to Features page -->
+                <li><a href="https://www.ilovepdf.com" target="_blank">Image Compressor</a></li> <!-- Link to ilovepdf.com -->
+                <li><a href="resize.html">Pic Resize</a></li> <!-- Link to Pic Resize page -->
+                <li><a href="all-tools.html">All Tools</a></li> <!-- Link to All Tools page -->
+                <li><a href="about.html">About Us</a></li> <!-- Link to About Us page -->
+                <li><a href="contact.html">Contact Us</a></li> <!-- Link to Contact Us page -->
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <h1>AI-Powered Background Remover by Naim Xbz</h1>
+        <p>Instantly remove the background from your photos with AI technology!</p>
+        <a href="www.linkedin.com/in/naimxbz" class="cta-button">Contact with Naim Xbz</a>
+    </section>
+
+    <section id="upload">
+        <h2>Upload Your Image</h2>
+        <p>Choose an image to remove the background.</p>
+        <div id="drop-area">
+            <p>Drag and drop your image here, or click to select a file.</p>
+            <input type="file" id="file-input" accept="image/*" style="display:none;">
+            <button id="file-select">Select Image</button>
+            <img id="preview" src="" alt="Preview" style="display:none;">
+        </div>
+        <button id="process-btn">Remove Background</button>
+        <div id="loading" style="display:none;">Processing...</div>
+    </section>
+
+    <section id="results" style="display:none;">
+        <h2>Results</h2>
+        <div id="output-container">
+            <img id="original" src="" alt="Original Image" style="max-width: 300px; height: auto;">
+            <img id="processed" src="" alt="Processed Image" style="max-width: 300px; height: auto;">
+        </div>
+        <a id="download-btn" href="#" download="processed.png">Download Image</a>
+        <button id="change-bg-btn">Change Background Color</button>
+        <div id="color-picker">
+            <label for="bg-color">Pick Background Color:</label>
+            <input type="color" id="bg-color" name="bg-color" value="#ffffff">
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 AI Background Remover. All rights reserved. Made with ❤️ by <a href="https://www.linkedin.com/in/naimxbz/" target="_blank">Naim Xbz</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
